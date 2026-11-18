@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple, responsive calculator built with HTML, CSS, and vanilla JavaScript.">
+  <title>JavaScript Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="calculator-card">
+    <header class="calculator-header">
+      <p class="eyebrow">A beginner-friendly project</p>
+      <h1>JavaScript Calculator</h1>
+      <p class="intro">Enter two numbers and choose an operation.</p>
+    </header>
+
+    <form id="calculator-form" novalidate>
+      <div class="input-group">
+        <label for="first-number">First number</label>
+        <input
+          id="first-number"
+          name="firstNumber"
+          type="number"
+          step="any"
+          inputmode="decimal"
+          placeholder="e.g. 12.5 or -3"
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="second-number">Second number</label>
+        <input
+          id="second-number"
+          name="secondNumber"
+          type="number"
+          step="any"
+          inputmode="decimal"
+          placeholder="e.g. 4"
+        >
+      </div>
+
+      <fieldset class="operations">
+        <legend>Choose an operation</legend>
+        <div class="operation-buttons">
+          <button class="operation-button" type="button" data-operation="addition" aria-label="Add">+</button>
+          <button class="operation-button" type="button" data-operation="subtraction" aria-label="Subtract">−</button>
+          <button class="operation-button" type="button" data-operation="multiplication" aria-label="Multiply">×</button>
+          <button class="operation-button" type="button" data-operation="division" aria-label="Divide">÷</button>
+        </div>
+      </fieldset>
+
+      <section class="result-panel" aria-live="polite" aria-atomic="true">
+        <p class="result-label">Result</p>
+        <p id="result" class="result-value">—</p>
+        <p id="message" class="message" role="status">Your answer will appear here.</p>
+      </section>
+
+      <button id="clear-button" class="clear-button" type="reset">Clear</button>
+    </form>
+
+    <footer class="calculator-footer">
+      Built with HTML, CSS, and vanilla JavaScript
+    </footer>
+  </main>
+</body>
+</html>
